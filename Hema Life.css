@@ -1,0 +1,1929 @@
+/* استيراد خط رسمي */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+/* إعدادات عامة */
+body {
+  margin: 0;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.navbar-blood {
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+  background-color: crimson;
+  padding: 10px 20px;
+  padding: 20px;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-blood {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links-blood {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* المسافة بين العناصر */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links-blood li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* hover مع خط أنيق */
+.nav-links-blood li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links-blood li a:hover::after {
+  width: 100%;
+}
+
+/* أيقونة القائمة */
+.menu-icon-blood {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* صورة تحت الـ navbar */
+.banner-blood {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* media query للجوال */
+@media (max-width: 768px) {
+  .nav-links-blood {
+    display: none;
+    flex-direction: column;
+    background-color: crimson;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .nav-links-blood.active {
+    display: flex;
+  }
+
+  .menu-icon-blood {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+:root {
+  --primary-color: #ad1606;
+  --secondary-color: #34495e;
+  --light-color: #ecf0f1;
+}
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* height: 100px; */
+  padding-bottom: 80px; /* مساحة للشريط السفلي */
+}
+
+/* === الهيدر === */
+header {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  color: white;
+  
+}
+
+.logo img {
+  width: 140px;
+  height: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+   align-items: center; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+/* === القسم الرئيسي === */
+/* .hero {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('enceinte.jpg');
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+} */
+
+
+
+
+
+main section div h1{
+  color: white
+}
+
+
+/* main section{
+  margin-bottom: 200px;
+
+  margin-top: 100px;
+} */
+
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('enceinte.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+ padding-top: 100px; position: relative;
+ 
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  /* background-color: rgba(0, 0, 0, 0.6); خلفية داكنة شفافة */
+  color: white; /* لون النص */
+  border-radius: 15px;
+  
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: white; /* لون الفقرة */
+}
+
+/* الزر */
+.cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #c0392b;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* الهواتف الصغيرة جداً */
+@media (max-width: 480px) {
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+   main section{
+ margin-top: 20px;
+  } 
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* الهواتف المتوسطة */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero {
+    height: 400px;
+  }
+   main section{
+    margin-top: 20px;
+     } 
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* التابلت */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    height: 450px;
+  }
+  /* main section{
+    margin-top: 90px;
+     } */
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* الشاشات الكبيرة */
+@media (min-width: 992px) {
+  .hero {
+    height: 600px;
+  }
+
+   main section{
+    margin-top: 20px;
+     } 
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* === الأقسام === */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section .form-group input {
+  caret-color: #c82333;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(117, 27, 27, 0.999);
+}
+
+/* === الفورم === */
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* === الفوتر === */
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* === الشريط السفلي الثابت === */
+.footer-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px 0;
+  z-index: 999;
+}
+
+.footer-navbar div {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-navbar a {
+  color: white;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-navbar a:hover {
+  background-color: crimson;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ============ Media Queries ============ */
+
+/* 1. الهواتف الصغيرة جداً */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    height: 400px;
+  }
+
+  .hero-content {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  .footer-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 2. الهواتف المتوسطة */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero {
+    height: 450px;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+    max-width: 80%;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    padding: 1.5rem;
+  }
+}
+
+/* 3. التابلت */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    height: 500px;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-navbar {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+/* 4. الشاشات الكبيرة */
+@media (min-width: 992px) {
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero {
+    height: 500px;
+  }
+
+  .footer-navbar {
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === الخط === */
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding-bottom: 80px; /* مساحة للشريط السفلي */
+}
+
+/* === صفحة اتصل بنا === */
+.contact-section {
+  padding: 50px 0;
+  background-color: #ecf0f1;
+  text-align: center; /* جعل النصوص في الوسط */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.contact-details,
+.contact-form {
+  width: 48%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h3,
+.contact-form h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.contact-details p,
+.contact-form p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  background-color: #c0392b;
+}
+
+/* === خريطة جوجل === */
+.map {
+  margin-top: 40px;
+}
+
+.google-map iframe {
+  width: 80%;
+  height: 400px;
+  border: 0;
+  border-radius: 8px;
+  margin: 0 auto; /* جعل الخريطة في الوسط */
+  display: block; /* تفعيل عرض الخريطة كـ Block لجعلها في المنتصف */
+}
+
+/* === النصوص في أسفل الصفحة === */
+.footer-text {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* === الشريط السفلي الثابت === */
+.footer-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px 0;
+  z-index: 999;
+}
+
+.footer-navbar div {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-navbar a {
+  color: white;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-navbar a:hover {
+  background-color: crimson;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ============ Media Queries ============ */
+
+/* 1. الهواتف الصغيرة جداً */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .contact-details,
+  .contact-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-navbar div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* 2. الهواتف المتوسطة */
+@media (min-width: 481px) and (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links li {
+    margin: 10px;
+  }
+
+  .contact-details,
+  .contact-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+/* 3. التابلت */
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact-details,
+  .contact-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: 85%;
+  }
+}
+
+/* 4. الشاشات الكبيرة */
+@media (min-width: 992px) {
+  .container {
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  padding: 20px;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border: 5px solid #3498db;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  iframe {
+    height: 300px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* عام */
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* ترويسة الصفحة */
+header {
+  background-color: #f8f6f6;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* القسم الخاص بـ "من نحن" */
+.about-section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-container h2 {
+  font-size: 28px;
+  color: #d32f2f;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* قسم فريق العمل */
+.team-section {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 30px;
+  color: #d32f2f;
+  margin-bottom: 30px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.team-member p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* التذييل */
+footer {
+  background-color: #d32f2f;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  .about-container h2 {
+    font-size: 24px;
+  }
+
+  .about-container p {
+    font-size: 16px;
+  }
+
+  .team-section h2 {
+    font-size: 26px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  padding-bottom: 80px; /* مساحة للشريط السفلي */
+}
+
+.footer-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px 0;
+  z-index: 999;
+}
+
+.footer-navbar div {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-navbar a {
+  color: white;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-navbar a:hover {
+  background-color: crimson;
+  color: white;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-wrapper-blood {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(183, 28, 28, 0.2);
+  border-top: 8px solid #b71c1c;
+}
+
+.form-wrapper-blood h2 {
+  color: #b71c1c;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.gender-blood {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gender-blood label {
+  font-weight: normal;
+}
+
+button {
+  background-color: #b71c1c;
+  color: white;
+  padding: 12px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8e1a1a;
+}
+
+/* ===================== Media Queries ===================== */
+
+/* الهواتف الصغيرة جداً */
+@media (max-width: 480px) {
+  .form-wrapper-blood {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .gender-blood {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* التابلت والهواتف المتوسطة */
+@media (min-width: 481px) and (max-width: 991px) {
+  .form-wrapper-blood {
+    margin: 30px auto;
+    padding: 25px;
+  }
+
+  .gender-blood {
+    gap: 15px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+/* الشاشات الكبيرة */
+@media (min-width: 992px) {
+  .form-wrapper-blood {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 35px;
+  }
+
+  button {
+    font-size: 17px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  padding-bottom: 80px; /* مساحة للشريط السفلي */
+/* }  */
+.footer-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px 0;
+  z-index: 999;
+}
+
+.footer-navbar div {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-navbar a {
+  color: white;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-navbar a:hover {
+  background-color: crimson;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ===================== Media Queries ===================== */
+
+/* الشاشات الصغيرة جداً (الهواتف) */
+@media (max-width: 480px) {
+  .footer-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .footer-navbar div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-navbar a {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* التابلت والأجهزة المتوسطة */
+@media (min-width: 481px) and (max-width: 991px) {
+  .footer-navbar {
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .footer-navbar div {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-navbar a {
+    padding: 12px;
+    font-size: 17px;
+  }
+}
+
+/* الشاشات الكبيرة (أجهزة سطح المكتب) */
+@media (min-width: 992px) {
+  .footer-navbar {
+    justify-content: space-around;
+    padding: 15px 0;
+  }
+
+  .footer-navbar div {
+    gap: 25px;
+  }
+
+  .footer-navbar a {
+    padding: 12px;
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === تنسيق القسم (خدماتنا) === */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(117, 27, 27, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(117, 27, 27, 0.2);
+}
+
+/* === Media Queries === */
+
+/* 1. الهواتف الصغيرة جداً */
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 2. الهواتف المتوسطة */
+@media (min-width: 481px) and (max-width: 767px) {
+  .section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature-card {
+    padding: 1.8rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .feature-card p {
+    font-size: 1rem;
+  }
+}
+
+/* 3. التابلت */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    padding: 4rem 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-card {
+    padding: 2rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .feature-card p {
+    font-size: 1.1rem;
+  }
+}
+
+/* 4. الشاشات الكبيرة */
+@media (min-width: 992px) {
+  .section {
+    padding: 4rem 2rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-card {
+    padding: 2.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .feature-card p {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* التصميم العام للفوتر */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* تصميم الأيقونات */
+.social-icon {
+  font-size: 24px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* ألوان الأيقونات حسب الموقع */
+.facebook {
+  color: #3b5998; /* اللون الأزرق لفيسبوك */
+}
+
+.instagram {
+  color: #e1306c; /* اللون الوردي لإنستجرام */
+}
+
+.whatsapp {
+  color: #25d366; /* اللون الأخضر لواتساب */
+}
+
+.twitter {
+  color: #1da1f2; /* اللون الأزرق لتويتر */
+}
+
+.blood-donation {
+  color: #e40046; /* اللون الأحمر للتبرع بالدم */
+}
+
+/* تأثير hover على الأيقونات */
+.social-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* الميديا كويري للتكيف مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icon {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    gap: 15px;
+  }
+
+  /* إضافة قاعدة لتصفية الأيقونات في صفين عند تصغير الشاشة */
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* اثنتان في صف */
+    gap: 15px;
+  }
+
+  .social-icon {
+    font-size: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.good {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400حء;
+  background-color: #f9f9f9; /* خلفية اختيارية */
+}
+
+dotlottie-player {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .good {
+    height: auto;
+    padding: 40px 0;
+    flex-direction: column;
+  }
+
+  dotlottie-player {
+    width: 90%;
+    height: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* التصميم العام */
+body {
+  direction: rtl; /* الكتابة من اليمين لليسار */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.left, .right {
+  flex: 1;
+  margin: 10px;
+}
+
+/* وضع الصورة على اليمين */
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* وضع النص على اليسار */
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.right h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.right p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.right button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* التكيف مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left, .right {
+    flex: 1 1 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .right {
+    order: 2; /* وضع الكتابة أسفل الصورة */
+  }
+
+  .left {
+    order: 1; /* وضع الصورة أولاً */
+  }
+
+  .right h1 {
+    font-size: 20px;
+  }
+
+  .right p {
+    font-size: 16px;
+  }
+}
